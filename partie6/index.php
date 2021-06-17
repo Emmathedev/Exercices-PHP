@@ -172,6 +172,8 @@ Les champs doivent être renseignés. Vérifiez la saisie. Empêchez l'affichage
                 // valider le fichier et le stocker définitivement
                 move_uploaded_file($_FILES['monfichier']['tmp_name'], 'uploads/' . basename($_FILES['monfichier']['name']));
                 echo "L'envoi a bien été effectué !";
+            } else {
+                echo "le format n'est pas du pdf";
             }
         }
     }
