@@ -92,6 +92,45 @@ session_start();
             </form>
         </div>
     </div>
+    <br>
+    <div class="container">
+        <h2>Exercice 5</h2>
+        <p class="consigne">Intialisez deux cookie : pseudo et login. Créez deux champs afin de donner une valeur aux cookie. Afficher ces cookie sur la même page.</p>
+        <div>
+        <?php
+        setcookie('pseudo', $_POST['pseudo'], time() + 365*24*3600, null, null, false, true); 
+        setcookie('login', $_POST['login'], time() + 365*24*3600, null, null, false, true);
+        ?>
+            <form action="index.php" method="POST">
+                <label for="pseudo">Ton peudo</label>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Ton pseudo">
+
+                <label for="login">Ton mot de passe</label>
+                <input type="text" id="login" name="login" placeholder="Ton login">
+
+                <input type="submit" value="Submit">
+            </form>
+
+        <p>Affichage des cookies: le pseudo est <?php echo $_POST['pseudo']; ?> et le login est <?php echo $_POST['login']; ?></p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h2>Exercice 6</h2>
+        <p class="consigne">Intialisez deux cookie : pseudo et login. Créez deux champs afin de donner une valeur aux cookie. Afficher ces cookie sur une autre page.</p>
+        <div>
+        
+            <form action="exo6.php" method="POST">
+                <label for="pseudoExo6">Ton peudo</label>
+                <input type="text" id="pseudoExo6" name="pseudoExo6" placeholder="Ton pseudo">
+
+                <label for="loginExo6">Ton mot de passe</label>
+                <input type="text" id="loginExo6" name="loginExo6" placeholder="Ton login">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
