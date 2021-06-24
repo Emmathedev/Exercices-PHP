@@ -98,20 +98,20 @@ session_start();
         <p class="consigne">Intialisez deux cookie : pseudo et login. Créez deux champs afin de donner une valeur aux cookie. Afficher ces cookie sur la même page.</p>
         <div>
         <?php
-        setcookie('pseudo', $_POST['pseudo'], time() + 365*24*3600, null, null, false, true); 
-        setcookie('login', $_POST['login'], time() + 365*24*3600, null, null, false, true);
+        setcookie('pseudoExo5', $_POST['pseudoExo5'], time() + 365*24*3600, null, null, false, true); 
+        setcookie('loginExo5', $_POST['loginExo5'], time() + 365*24*3600, null, null, false, true);
         ?>
-            <form action="index.php" method="POST">
-                <label for="pseudo">Ton peudo</label>
-                <input type="text" id="pseudo" name="pseudo" placeholder="Ton pseudo">
+            <form action="/index.php" method="POST">
+                <label for="pseudoExo5">Ton peudo</label>
+                <input type="text" id="pseudoExo5" name="pseudoExo5" placeholder="Ton pseudo">
 
-                <label for="login">Ton mot de passe</label>
-                <input type="text" id="login" name="login" placeholder="Ton login">
+                <label for="loginExo5">Ton mot de passe</label>
+                <input type="text" id="loginExo5" name="loginExo5" placeholder="Ton login">
 
                 <input type="submit" value="Submit">
             </form>
 
-        <p>Affichage des cookies: le pseudo est <?php echo $_POST['pseudo']; ?> et le login est <?php echo $_POST['login']; ?></p>
+        <p>Affichage des cookies: le pseudo est <?php echo $_POST['pseudoExo5']; ?> et le login est <?php echo $_POST['loginExo5']; ?></p>
         </div>
     </div>
     <br>
@@ -131,6 +131,7 @@ session_start();
             </form>
         </div>
     </div>
+    
 </body>
 
 </html>
